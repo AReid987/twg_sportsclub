@@ -58,12 +58,25 @@ TWG Sportsclub is a web application designed to offer users an engaging and comp
     - Players ⛹️‍♂️
     - Administrators 👮
   - External Systems 🧮
-    - The Odds API (for sports events and odds data) [text](https://the-odds-api.com/)
-    - Stripe (for payment processing) [text](https://docs.stripe.com/api)
-    - Sports New API (for sports news, Provider TBD)
-    - Real-Time Scores API (for live event score updates, Provider TBD)
+    - Supabase (for database) [text](https://supabase.com/docs) 🖥️
+    - Supabase (for real-time Leaderboard data) [text](https://supabase.com/docs/guides/realtime) 📊
+    - The Odds API (for sports events and odds data) [text](https://the-odds-api.com/) 🎟️
+    - Stripe (for payment processing) [text](https://docs.stripe.com/api) 💳
+    - Sports News API (for sports news, Provider TBD) 📰
+    - Real-Time Scores API (for live event score updates, Provider TBD) ⏲️
       - LiveScore API ➡️ possible option [text](https://rapidapi.com/apidojo/api/livescore6)
-    - Auth0 (for authentication) [text](https://auth0.com/docs)
-    - GitHub and GitHub Actions (for CI/CD pipeline) [text](https://docs.github.com/en/actions)
-    - Nx Cloud (for remote caching and CI/CD optimization) [text](https://nx.app/)
-    - Deployment Platform (e.g., AWS, Azure, GCP, Vercel, Railway, Fly.io, etc)
+    - Auth0 OR Supabase (for authentication) [text](https://auth0.com/docs) or [text](https://supabase.com/docs/guides/auth) 🔑
+    - GitHub and GitHub Actions (for CI/CD pipeline) [text](https://docs.github.com/en/actions) 🔧
+    - Nx Cloud (for remote caching and CI/CD optimization) [text](https://nx.app/) 🌩️
+    - Deployment Platform (e.g., AWS, Azure, GCP, Vercel, Railway, Fly.io, etc) 🚀
+
+```mermaid
+graph TD
+  title System Context Diagram for TWG Sportsclub
+  Person(player, "Player", "Engaged Subscriber")
+
+  Enterprise_Boundary(b0, "SportsclubBoundary0") {
+    Person(player, "Player", "An engaged subscriber")
+    Person(admin, "Admin", "Internal staff member")
+  }
+```
