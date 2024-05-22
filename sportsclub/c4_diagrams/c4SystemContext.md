@@ -5,7 +5,7 @@
     title System Context Diagram for TWG Sportsclub
     Enterprise_Boundary(b0, "Sports Gaming Enterprise") {
       Person(player, "Player", "A User who subscribes and makes picks")
-      System(TWGSportsclubApp, "TWG Sportsclub App", "Allows Users to place picks on various sports events.")
+      System(TWGSportsclubApp, "TWG Sportsclub App", "Allows Users to place picks on various sports events. Technology: Next.js, Nest.js ")
 
       Enterprise_Boundary(b1, "External Systems") {
         System_Ext(paymentProcessorAPI, "Payment Processor API", "Handles Payment Transactions")
@@ -38,4 +38,6 @@
     UpdateRelStyle(TWGSportsclubApp, oddsAPI, $textColor="purple", $lineColor="purple", $offsetY="-10")
     UpdateRelStyle(TWGSportsclubApp, liveScoresAPI, $textColor="orange", $lineColor="orange", $offsetY="-10")
     UpdateRelStyle(TWGSportsclubApp, newsAPI, $textColor="grey", $lineColor="grey", $offsetY="-10")
+
+    UpdateLayoutConfig($cShapeInRow="3")
 ```
